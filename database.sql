@@ -1,0 +1,13 @@
+CREATE DATABASE IF NOT EXISTS gatitos_jane;
+USE gatitos_jane;
+
+CREATE TABLE IF NOT EXISTS envios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) NOT NULL,
+    imagen VARCHAR(255) NOT NULL,
+    ip VARCHAR(45) DEFAULT NULL,
+    enviado TINYINT(1) NOT NULL DEFAULT 0,
+    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX IF NOT EXISTS idx_envios_ip_fecha ON envios (ip, fecha);

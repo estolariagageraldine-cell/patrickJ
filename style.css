@@ -10,6 +10,115 @@ body{
     font-family: 'Exo', sans-serif;
 }
 
+.hidden {
+    display: none !important;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(17, 24, 39, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.modal-content {
+    background: #fff;
+    width: min(420px, 100%);
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    position: relative;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.modal-header h2 {
+    margin: 0;
+    color: #222;
+    font-size: 1.4rem;
+}
+
+.close-btn {
+    border: none;
+    background: transparent;
+    font-size: 1.7rem;
+    cursor: pointer;
+    color: #555;
+}
+
+.modal-preview {
+    display: flex;
+    justify-content: center;
+    margin: 12px 0 18px;
+}
+
+.modal-preview img {
+    max-width: 100%;
+    max-height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid #e5e7eb;
+    padding: 0;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.modal-form label {
+    font-weight: 600;
+    color: #374151;
+}
+
+.modal-form input {
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 1rem;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.btn {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #8f94fb, #4e54c8);
+    color: white;
+}
+
+.btn-secondary {
+    background: #e5e7eb;
+    color: #111827;
+}
+
+.modal-message {
+    min-height: 20px;
+    font-size: 0.95rem;
+    color: #0f766e;
+    margin-top: 8px;
+}
 
 .context {
     width: 100%;
@@ -30,8 +139,8 @@ body{
     background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
     width: 100%;
     height:100vh;
-    
-   
+    position: relative;
+    z-index: 0;
 }
 
 .circles{
@@ -41,6 +150,7 @@ body{
     width: 100%;
     height: 100%;
     overflow: hidden;
+    z-index: 0;
 }
 
 .circles li{
@@ -164,11 +274,15 @@ body{
     color: #fff;
   font-size: 50px;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 .imagenes{
   display: grid; /* Activa el sistema de cuadrícula */
   height: 100vh; /* Define una altura total para la pantalla */
   grid-template-columns: repeat(3, 1fr); 
+  position: relative;
+  z-index: 1;
 }
 img {
   width: 100%;       /* Ocupa el 100% del ancho de su contenedor */

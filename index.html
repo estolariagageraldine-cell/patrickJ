@@ -10,34 +10,58 @@
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
-       <div class="context">
-    
+    <div class="context"></div>
+
+    <div class="area">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+        <div class="titulo">
+            <p class="t">Fondos de pantalla de gatitos</p>
+        </div>
+
+        <div class="imagenes">
+            <img src="images/images.jpg" alt="gato1" data-image="images.jpg">
+            <img src="images/images (1).jpg" alt="gato2" data-image="images (1).jpg">
+            <img src="images/images (2).jpg" alt="gato3" data-image="images (2).jpg">
+        </div>
     </div>
 
+    <div id="emailModal" class="modal hidden" aria-modal="true" role="dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Enviar imagen</h2>
+                <button id="closeModal" class="close-btn" type="button" aria-label="Cerrar">×</button>
+            </div>
 
-<div class="area" >
-            <ul class="circles">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-            </ul>
-    
-    <div class="titulo">
-        <p class="t">Fondos de pantalla de gatitos</p>
+            <div class="modal-preview">
+                <img id="modalImage" src="" alt="imagen seleccionada">
+            </div>
+
+            <form id="emailForm" class="modal-form">
+                <label for="emailInput">Correo electrónico</label>
+                <input id="emailInput" type="email" placeholder="tuemail@gmail.com" required>
+
+                <div class="modal-actions">
+                    <button type="button" id="cancelBtn" class="btn btn-secondary">Cancelar</button>
+                    <button type="submit" id="submitBtn" class="btn btn-primary">Enviar</button>
+                </div>
+
+                <div id="modalMessage" class="modal-message" aria-live="polite"></div>
+            </form>
+        </div>
     </div>
-    <div class="imagenes">
-        <img src="images/images.jpg" alt="gato1">
-        <img src="images/images (1).jpg" alt="gato2">
-        <img src="images/images (2).jpg" alt="gato3">
-    </div>
-        
-    </div >
+
+    <script src="script.js" defer></script>
 </body>
 </html>
